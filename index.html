@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="myInput" size="100"> </input>
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    var x = document.createElement("IFRAME");
+    x.setAttribute("style", "width:100%;min-width:200px;max-width:350px;height:57px;border:0;overflow:hidden;");
+    x.setAttribute("scrolling", "no");
+    x.setAttribute("id", "myIframe");
+    var input = document.getElementById("myInput").value;
+    var url = "//ytbapi.com/dl.php?link=" + input;
+    url += "&format=mp3&text=fff&color=009688";
+    console.log(url);
+    x.setAttribute("src", url);
+    document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
